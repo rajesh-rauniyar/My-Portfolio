@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+	color-scheme: dark;
+}
+
+html, body, #root {
+	height: 100%;
+}
+
+body {
+	margin: 0;
+	font-family: 'Outfit', 'Segoe UI', sans-serif;
+	background: radial-gradient(circle at 25% 20%, rgba(255, 140, 0, 0.16), transparent 45%),
+		radial-gradient(circle at 70% 55%, rgba(255, 255, 255, 0.05), transparent 55%),
+		#f0eeee;
+}
+
+.bg-hero {
+	background: radial-gradient(circle at 20% 20%, rgba(255, 140, 0, 0.18), transparent 40%),
+		radial-gradient(circle at 75% 60%, rgba(255, 255, 255, 0.04), transparent 55%),
+		linear-gradient(120deg, #0b0b0b 0%, #141414 55%, #0b0b0b 100%);
+}
+html {
+  scroll-behavior: smooth;
+}
