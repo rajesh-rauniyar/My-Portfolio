@@ -495,12 +495,13 @@ const ProjectsSection = () => {
         }
 
         /* ── RESPONSIVE ── */
-        @media (max-width: 860px) {
-          .pj-grid { grid-template-columns: 1fr; }
-          .pj-detail-grid { grid-template-columns: 1fr; gap: 32px; }
-          .pj-detail { padding: 32px 24px; max-height: 92vh; }
-          .pj-detail-title { font-size: clamp(40px, 14vw, 70px); }
-        }
+@media (max-width: 860px) {
+  .pj-grid { grid-template-columns: 1fr; }
+  .pj-detail-grid { grid-template-columns: 1fr; gap: 32px; }
+  .pj-detail { padding: 32px 24px; max-height: 92vh; }
+  .pj-detail-title { font-size: clamp(40px, 14vw, 70px); }
+  .pj-detail-image { display: none; }
+}
       `}</style>
 
       <div className="pj-wrapper" id="projects" ref={sectionRef}>

@@ -324,10 +324,29 @@ html {
         }
 
         /* ── RESPONSIVE ── */
-        @media (max-width: 600px) {
-          .sk-grid { gap: 32px 36px; }
-          .sk-icon-wrap { width: 76px; height: 76px; }
-        }
+        /* ── RESPONSIVE ── */
+ /* ── RESPONSIVE ── */
+@media (max-width: 600px) {
+  .sk-grid {
+    grid-template-columns: repeat(6, 1fr);
+    gap: 36px 0;
+    max-width: 100%;
+  }
+  /* Row 1: items 1-3 each take 2 columns */
+  .sk-item:nth-child(1) { grid-column: 1 / 3; }
+  .sk-item:nth-child(2) { grid-column: 3 / 5; }
+  .sk-item:nth-child(3) { grid-column: 5 / 7; }
+  /* Row 2: items 4-6 each take 2 columns */
+  .sk-item:nth-child(4) { grid-column: 1 / 3; }
+  .sk-item:nth-child(5) { grid-column: 3 / 5; }
+  .sk-item:nth-child(6) { grid-column: 5 / 7; }
+  /* Row 3: items 7-8 centered — start at col 2 and 4 */
+  .sk-item:nth-child(7) { grid-column: 2 / 4; }
+  .sk-item:nth-child(8) { grid-column: 4 / 6; }
+
+  .sk-icon-wrap { width: 72px; height: 72px; }
+  .sk-name { font-size: 11px; }
+}
       `}</style>
 
       {/* ── WAVY GOLD DIVIDER ── */}

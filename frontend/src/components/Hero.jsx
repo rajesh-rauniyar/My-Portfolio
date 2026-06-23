@@ -337,15 +337,43 @@ const HeroSection = () => {
         }
 
         /* ── RESPONSIVE ── */
-        @media (max-width: 900px) {
-          .hero-container { grid-template-columns: 1fr; gap: 48px; }
-          .hero-text { padding: 32px 24px 0; text-align: center; align-items: center; }
-          .hero-eyebrow { justify-content: center; }
-          .hero-role, .hero-bio { max-width: 100%; }
-          .hero-image-col { padding-bottom: 48px; }
-          .hero-image-frame { width: 300px; }
-          .hero-socials { justify-content: center; }
-        }
+@media (max-width: 900px) {
+  .hero-container {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  /* Image moves to TOP on mobile */
+  .hero-image-col {
+    order: -1;
+    padding-bottom: 0;
+  }
+
+  .hero-image-frame { width: 260px; }
+
+  .hero-text {
+    padding: 0 24px 48px;
+    text-align: center;
+    align-items: center;
+  }
+
+  .hero-role, .hero-bio { max-width: 100%; }
+
+  .hero-socials { justify-content: center; }
+
+  /* Center the buttons */
+  .hero-buttons {
+    justify-content: center;
+    width: 100%;
+  }
+
+  .btn-primary,
+  .btn-secondary {
+    flex: 1;
+    text-align: center;
+    min-width: 130px;
+  }
+}
       `}</style>
 
       <div className="hero-wrapper" ref={sectionRef}>
